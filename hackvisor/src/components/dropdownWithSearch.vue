@@ -2,39 +2,35 @@
 import Multiselect from 'vue-multiselect';
 </script>
 <template>
-    <Multiselect 
-        v-model="selected"
-        :options="options.map(e => e.name)"
-        :multiple="true"
-        :close-on-select="true"
-        :preserve-search="true" 
-        :mulitple="true"
-        :allow-empty="true"
-        :placeholder="'Search...'"
-        @select="validateSelection"
-        @search-change="getDropdownValues" 
-
-        />
+    <Multiselect v-model="selected" :options="options.sort()" :close-on-select="true" :preserve-search="true"
+        :add-label="true" :allow-empty="true" :taggable="true" @tag="addTag" :placeholder="'Search...'"
+        @select="validateSelection" />
 </template>
 <script>
 export default {
-    props : [
-        'options',
-        'width'
-    ], 
+    props: [
+        'options'
+    ],
     data() {
         return {
-            selected: this.options.map(e => e.name)[0] // Default to the first option,
+            selected: null // Default to the first option,
         }
     },
     methods: {
         validateSelection(selection) {
             this.selected = selection;
-            console.log(selection + " has been selected");
+            // Emit the new value to the parent component
+            this.$emit('newValue', selection)
         },
-      
-        getDropdownValues(keyword) {
-            console.log("You could refresh options by querying the API with " + keyword);
+        addTag(tag) {
+            console.log("You could add a new tag " + tag);
+            if (!this.options.includes(tag)) {
+                this.options.push(tag);
+            }
+
+            this.selected = tag;
+            this.validateSelection(tag);
+
         }
     }
 }

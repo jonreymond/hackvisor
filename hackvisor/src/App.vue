@@ -1,6 +1,5 @@
 <script setup>
-import navbar from './components/focusBox.vue'
-import userComponent from './components/userComponent.vue'
+import userComponent from './components/userComponent.vue';
 import keywordComponent from './components/keywordComponent.vue'
 import productComponent from './components/productComponent.vue'
 </script>
@@ -8,7 +7,7 @@ import productComponent from './components/productComponent.vue'
 <template>
   <main class="background">
     <!-- Popups / features -->
-    <focusbox />
+  
 
     <!-- Main has three components -->
 
@@ -31,8 +30,10 @@ import productComponent from './components/productComponent.vue'
 main {
   display: flex;
   flex-direction: row;
-  height : 100vh ; 
-  width : 100vw; 
+  justify-content: center;
+  height : 98vh ; 
+  width : 99vw; 
+  margin : 5px ; 
 }
 
 

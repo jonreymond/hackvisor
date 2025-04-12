@@ -26,6 +26,13 @@ export const useProductStore = defineStore('product', {
         getProducts: (state) => state.products,
         getSelectedProduct: (state) => state.selectedProduct,
     },
+    actions: {
+        getFirstProducts(n) 
+        {
+            return this.products.slice(0, n);
+        }
+    }
+
 })
 
 export const useUserStore = defineStore('user', {
@@ -99,11 +106,8 @@ export const useUserStore = defineStore('user', {
             "lastLogin": "2025-04-12T08:45:00Z",
             "createdAt": "2018-06-22T10:00:00Z"
         }
-        ,
-        isLoggedIn: false,
     }),
     getters: {
-        getUser: (state) => state.user,
-        isLoggedIn: (state) => state.isLoggedIn,
+        getUser: (state) => state.user
     },
 })
