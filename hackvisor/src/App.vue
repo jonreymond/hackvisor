@@ -1,12 +1,15 @@
 <script setup>
-import navbar from './components/navigationBar.vue'
+import navbar from './components/focusBox.vue'
 import userComponent from './components/userComponent.vue'
 import keywordComponent from './components/keywordComponent.vue'
 import productComponent from './components/productComponent.vue'
 </script>
 
 <template>
-  <main>
+  <main class="background">
+    <!-- Popups / features -->
+    <focusbox />
+
     <!-- Main has three components -->
 
     <!-- 1. That displays the user data -->
