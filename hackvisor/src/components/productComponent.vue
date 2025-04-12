@@ -18,11 +18,13 @@ const store = useProductStore();
         </div>
 
         <div class="product-cards">
-            <productCart v-for="(product, index) in store.getFirstProducts(3)" :key="index" :product="product" :importance="index"/>
+            <productCart v-for="(product, index) in store.getFirstProducts(3)" :key="index" :product="product" :importance="product.importance"/>
         </div>
     </div>
 </template>
 <script>
+
+
 </script>
 <style scoped>
 #product-component {
@@ -34,7 +36,7 @@ const store = useProductStore();
     gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .product-dropdown {

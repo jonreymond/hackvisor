@@ -2,22 +2,53 @@
 import dropdownWithSearch from './dropdownWithSearch.vue';
 </script>
 <template>
-   
-
     <div id="keyword-component" class="windows">
-        <h3>Magic words</h3>
-        <div>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="var(--c4)" fill-opacity="1"
+                d="M0,224L48,213.3C96,203,192,181,288,144C384,107,480,53,576,58.7C672,64,768,128,864,144C960,160,1056,128,1152,122.7C1248,117,1344,139,1392,149.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+            </path>
+        </svg>
+        <div class="windows-content">
+            <div id="transcript">
+                <p>This is a black coding-themed window with scrollable text. You can add as much content as you want
+                    here, and it will remain scrollable.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam.</p>
+                <p>Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec
+                    tellus sed augue semper porta.</p>
+                <p>Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per
+                    conubia nostra, per inceptos himenaeos.</p>
+                <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.
+                    Aenean quam.</p>
+                <p>In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc
+                    egestas porttitor.</p>
+                <p>Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula
+                    lacinia aliquet. Mauris ipsum.</p>
+                <p>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum
+                    velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                </p>
+            </div>
 
             <div>
-                <dropdownWithSearch :options="keywords.map(e => e.word)" width="100%" @newValue="process_keyword" />
-            </div>
-            <div class="keyword-cloud">
-                <span v-for="keyword in keywords" :key="keyword.word" :style="getKeywordStyle(keyword)"
-                    @click="selectKeyword(keyword.word)" class="keyword">
-                    {{ keyword.word }}
-                </span>
-            </div>
+                <div class="input-group mb-3" :style="{margin : '20px 0px'}">
+                    <div class="input-group-prepend" :style="{border : '1px solid #F8F9FA', backgroundColor : '#F8F9FA !important' }" >
+                        <span class="input-group-text" id="basic-addon1"> Search or manually add a keyword</span>
+                    </div>
+                
+                <div :style="{width : '50%', 'margin-left' : '10px'}">
+                    <dropdownWithSearch :options="keywords.map(e => e.word)" width="100%" @newValue="process_keyword" />
 
+                </div>
+            </div>
+                <div class="keyword-cloud">
+                    <span v-for="keyword in keywords" :key="keyword.word" :style="getKeywordStyle(keyword)"
+                        @click="selectKeyword(keyword.word)" class="keyword">
+                        {{ keyword.word }}
+                    </span>
+                </div>
+
+            </div>
         </div>
     </div>
 </template>
@@ -137,14 +168,14 @@ export default {
             if (!this.selectedKeyword) return {};
 
             if (keyword.word === this.selectedKeyword.word) {
-                return { fontSize: '24px', fontWeight: 'bold', color: 'var(--r_primary)' };
+                return { fontSize: '24px', fontWeight: 'bold', color: 'var(--c1)' };
             }
 
             if (this.selectedKeyword.related && this.selectedKeyword.related.includes(keyword.word)) {
-                return { fontSize: '18px', fontWeight: '500', color: '#666' };
+                return { fontSize: '18px', fontWeight: '500', color: 'var(--c3)' };
             }
 
-            return { fontSize: '14px', color: '#aaa' };
+            return { fontSize: '14px', color: 'var(--c3)' };
         },
         process_keyword(keyword) {
             console.log('Processing keyword: ' + keyword);
@@ -167,11 +198,43 @@ export default {
 
 </script>
 <style scoped>
+#keyword-component {
+    position: relative;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0
+}
+
+.windows-content {
+    position: relative;
+    z-index: 1;
+    margin-top: 110px;
+
+}
+
+h3 {
+    margin-right: 20px;
+    z-index: 1;
+    position: relative;
+    background-color: var(--c4);
+    color: black;
+    text-align: right;
+
+}
+
 .keyword-cloud {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     cursor: pointer;
+    margin-top : 20px ;
+
 }
 
 .keyword {
@@ -181,5 +244,32 @@ export default {
 .keyword:hover {
     transform: scale(1.1);
     color: #000;
+}
+
+.windows-content {
+    display: flex;
+    flex-direction: row;
+
+    height: 100%;
+    width: 100%;
+}
+
+.windows-content>div {
+    flex: 1;
+    padding: 20px;
+}
+
+#transcript {
+    background-color: var(--c3);
+    color: var(--c2);
+    padding: 10px;
+    border-radius: 8px;
+
+    height: 80%;
+    width: 50%;
+    overflow-y: auto;
+
+    font-family: 'Courier New', Courier, monospace;
+
 }
 </style>

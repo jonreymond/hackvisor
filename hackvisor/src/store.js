@@ -29,7 +29,14 @@ export const useProductStore = defineStore('product', {
     actions: {
         getFirstProducts(n) 
         {
-            return this.products.slice(0, n);
+            return Object.entries(this.products).slice(0, n).map(([k,e]) => {
+                e['importance'] = 0
+                console.log(k)
+                if(k == 1){
+                    e['importance'] = 1
+                    return e 
+                }else return e 
+            });
         }
     }
 

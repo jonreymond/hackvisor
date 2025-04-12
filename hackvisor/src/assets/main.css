@@ -4,8 +4,12 @@
   --r_third : black; 
   --s_primary: #7C13FF;
   --s_second : #FFAF6E; 
+ 
 
-  
+  --c1 : #d6383b; 
+  --c2 : #e3bba3; 
+  --c3 : #1a1542; 
+  --c4 : #8d8aa1;
 }
 
 
@@ -21,6 +25,7 @@ h3, h2, h1{
   background-color: var(--r_primary);
   color : var(--r_second);
   padding : 10px ;
+  border-radius: 4px;
 
   width : 100%;
   text-align: center;
@@ -30,19 +35,16 @@ h3, h2, h1{
   width : 98%;
   margin : 2.5px ;
   border-radius: 4px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px 5px 10px rgba(0, 0, 0, 0.2);
-}
 
-.windows:hover {
-  
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2), -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background-color: var(--c2);
 }
 
 .windows > div {
   padding : 10px;
 }
 
-.background {
-  background-color: white;
 
+.multiselect__option--selected.multiselect__option--highlighted {
+  background-color: red !important;
+  color: var(--r_second);
 }
