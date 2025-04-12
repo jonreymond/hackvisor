@@ -2,14 +2,14 @@
 import Multiselect from 'vue-multiselect';
 </script>
 <template>
-    <Multiselect v-model="selected" :options="options.sort()" :close-on-select="true" :preserve-search="true"
-        :add-label="true" :allow-empty="true" :taggable="true" @tag="addTag" :placeholder="'Search...'"
+    <Multiselect class="my-custom-multiselect"  v-model="selected" :options="options.sort()" :close-on-select="true" :preserve-search="true"
+        :add-label="true" :allow-empty="true" :taggable="true" @tag="addTag" :placeholder="placeholder" :show-labels="false"
         @select="validateSelection" />
 </template>
 <script>
 export default {
     props: [
-        'options'
+        'options', 'placeholder'
     ],
     data() {
         return {
@@ -37,11 +37,3 @@ export default {
 
 </script>
 <style src="vue-multiselect/dist/vue-multiselect.css"></style>
-<style scoped>
-multiselect {
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-</style>

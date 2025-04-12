@@ -1,80 +1,69 @@
+<script setup>
+import { ref, nextTick, onMounted, watch } from 'vue'
+import { gsap } from 'gsap'
+import SummaryComponent from './components/summaryComponent.vue'
+import ExtractComponent from './components/extractComponent.vue'
+import TranscriptComponent from './components/tanscriptComponent.vue'
+// Component references
+const columnRefs = ref([])
+
+const columns = [
+    { title: 'User data', component: ExtractComponent },
+    { title: 'Transcript', component: TranscriptComponent },
+    { title: 'Summary', component: SummaryComponent }
+]
+
+const activeIndex = ref(0)
+
+const activate = (index) => {
+    if (activeIndex.value !== index) {
+        activeIndex.value = index
+    }
+}
+
+const animateColumns = () => {
+    columnRefs.value.forEach((el, index) => {
+        if (!el) return
+        const isActive = index === activeIndex.value
+        gsap.to(el, {
+            flex: isActive ? 4 : 1,
+            duration: 0.6,
+            ease: 'power2.inOut'
+        })
+    })
+}
+
+onMounted(() => {
+    nextTick(() => animateColumns())
+})
+
+watch(activeIndex, () => {
+    nextTick(() => animateColumns())
+})
+</script>
+
 <template>
     <div class="curtain-container">
         <div v-for="(col, index) in columns" :key="index" class="curtain-column"
             :class="{ active: activeIndex === index }" @mouseenter="activate(index)" ref="columnRefs">
             <div class="curtain-panel">
                 <h2>{{ col.title }}</h2>
-                <p v-if="activeIndex === index">{{ col.content }}</p>
+                <component v-if="activeIndex === index && col.component" :is="col.component" />
             </div>
         </div>
     </div>
 </template>
 
-<script>
-import { ref, nextTick, watch } from 'vue'
-import { gsap } from 'gsap'
-
-export default {
-    name: 'CurtainTabs',
-    data() {
-        return {
-            columns: [
-                { title: 'Transcript', content: 'Welcome to the home section.' },
-                { title: 'Summary', content: 'This is the about section.' },
-                { title: 'Extract', content: 'Get in touch with us here.' }
-            ],
-            activeIndex: 0,
-        }
-    },
-    mounted() {
-        this.$nextTick(() => {
-            this.animateColumns()
-        })
-    },
-    watch: {
-        activeIndex() {
-            this.$nextTick(() => {
-                this.animateColumns()
-            })
-        }
-    },
-    methods: {
-        activate(index) {
-            if (this.activeIndex !== index) {
-                this.activeIndex = index;
-            }
-        },
-
-        animateColumns() {
-            const columnRefs = this.columnRefs
-            columnRefs.forEach((el, index) => {
-                if (!el) return
-                const isActive = index === this.activeIndex
-                gsap.to(el, {
-                    flex: isActive ? 4 : 1,
-                    duration: 0.6,
-                    ease: 'power2.inOut',
-                })
-            })
-        }
-    },
-    setup() {
-        const columnRefs = ref([])
-        return { columnRefs }
-    }
-}
-
-</script>
 <style scoped>
-
-
 .curtain-container {
     display: flex;
     height: 100vh;
     overflow: hidden;
-    background: white
-    ;
+
+    background-image : url('/bkg.png');
+    background-size: cover;
 }
+
 
 .curtain-column {
     flex: 1;
@@ -84,9 +73,9 @@ export default {
     position: relative;
     border-right: 3px solid black;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-    background: white;
+
     color: black;
 }
 
@@ -105,12 +94,20 @@ export default {
     margin-bottom: 1rem;
 }
 
-.curtain-panel p {
+.curtain-panel div {
     font-size: 1.1rem;
     line-height: 1.5;
 }
 
 .active .curtain-panel {
-    background: #4c6ef5;
+
+    height: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    background-color : rgb(255, 255, 255, 0.8);
+    
+
+
 }
 </style>

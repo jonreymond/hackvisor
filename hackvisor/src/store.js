@@ -1,4 +1,6 @@
 import { defineStore } from 'pinia'
+import clientDataJson from './Client_Data.json'
+
 
 export const graphStore = defineStore('graph', {
 
@@ -27,94 +29,44 @@ export const useProductStore = defineStore('product', {
         getSelectedProduct: (state) => state.selectedProduct,
     },
     actions: {
-        getFirstProducts(n) 
-        {
-            return Object.entries(this.products).slice(0, n).map(([k,e]) => {
+        getFirstProducts(n) {
+            return Object.entries(this.products).slice(0, n).map(([k, e]) => {
                 e['importance'] = 0
                 console.log(k)
-                if(k == 1){
+                if (k == 1) {
                     e['importance'] = 1
-                    return e 
-                }else return e 
+                    return e
+                } else return e
             });
         }
     }
 
 })
 
+
+// go from csv to json 
+const csvToJson = (csvFile) => {
+    return new Promise((resolve, reject) => {
+        Papa.parse(csvFile, {
+            header: true,
+            skipEmptyLines: true,
+            complete: (results) => {
+                resolve(results.data);
+            },
+            error: (error) => {
+                reject(error);
+            }
+        });
+    });
+};
+
+
+console.log(clientDataJson)
 export const useUserStore = defineStore('user', {
     state: () => ({
-        user: {
-            "clientId": "C123456789",
-            "personalInfo": {
-                "firstName": "Jane",
-                "lastName": "Doe",
-                "dateOfBirth": "1985-07-12",
-                "email": "jane.doe@example.com",
-                "phone": "+1-555-123-4567",
-                "address": {
-                    "street": "123 Main Street",
-                    "city": "Springfield",
-                    "state": "IL",
-                    "postalCode": "62704",
-                    "country": "USA"
-                }
-            },
-            "accounts": [
-                {
-                    "accountId": "A1001",
-                    "type": "Checking",
-                    "balance": 2530.75,
-                    "currency": "USD",
-                    "openedDate": "2020-01-15",
-                    "isPrimary": true
-                },
-                {
-                    "accountId": "A1002",
-                    "type": "Savings",
-                    "balance": 10234.89,
-                    "currency": "USD",
-                    "openedDate": "2019-11-03",
-                    "interestRate": 0.02
-                }
-            ],
-            "creditCards": [
-                {
-                    "cardId": "CC7890",
-                    "cardType": "Visa Platinum",
-                    "limit": 5000,
-                    "balance": 1234.56,
-                    "dueDate": "2025-05-05",
-                    "status": "Active"
-                }
-            ],
-            "loans": [
-                {
-                    "loanId": "L3456",
-                    "type": "Auto Loan",
-                    "principal": 15000,
-                    "outstanding": 6200.50,
-                    "monthlyPayment": 320.75,
-                    "startDate": "2021-03-10",
-                    "endDate": "2026-03-10",
-                    "interestRate": 0.045
-                }
-            ],
-            "preferences": {
-                "language": "en",
-                "communication": {
-                    "email": true,
-                    "sms": false,
-                    "phone": false
-                },
-                "marketingOptIn": true
-            },
-            "kycStatus": "Verified",
-            "lastLogin": "2025-04-12T08:45:00Z",
-            "createdAt": "2018-06-22T10:00:00Z"
-        }
-    }),
-    getters: {
-        getUser: (state) => state.user
-    },
+        user: Object.values(clientDataJson),
+        getters: {
+            getUser: (state) => state.user
+        },
+    })
 })

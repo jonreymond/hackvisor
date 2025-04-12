@@ -1,7 +1,27 @@
+<script setup>
+
+import { useUserStore } from '../store';
+
+const userStore = useUserStore();
+
+</script>
+
 <template>
     <div>
-        
-        <p>This is a summary component.</p>
+        hi 
+        <table class="table">
+            <thead>
+                <tr>
+                    <th v-for="(key, index) in userStore.userKeys" :key="index">{{ key }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(value, index) in userStore.user" :key="index">
+                    <td v-for="(val, i) in value" :key="i">{{ val }}</td>
+                </tr>
+            </tbody>
+       
+        </table>
     </div>
 </template>
 

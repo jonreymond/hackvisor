@@ -10,6 +10,8 @@
   --c2 : #e3bba3; 
   --c3 : #1a1542; 
   --c4 : #8d8aa1;
+
+  --button: rgb(44,67,91);
 }
 
 
@@ -36,7 +38,7 @@ h3, h2, h1{
   margin : 2.5px ;
   border-radius: 4px;
 
-  background-color: var(--c2);
+
 }
 
 .windows > div {
@@ -45,6 +47,29 @@ h3, h2, h1{
 
 
 .multiselect__option--selected.multiselect__option--highlighted {
-  background-color: red !important;
+  background-color: rgb(227, 103, 227) !important;
   color: var(--r_second);
+}
+
+
+/* Scoped or global */
+.my-custom-multiselect .multiselect {
+  background-color: #f5f5fa !important;
+  border: 2px solid #5c7cfa !important;
+  border-radius: 8px;
+  color: #333;
+}
+
+.my-custom-multiselect .multiselect__placeholder {
+  color: #888 !important;
+}
+
+.my-custom-multiselect .multiselect__option--highlight {
+  background: linear-gradient(135deg, #4285F4, #9B72FF) !important;
+  color: white;
+}
+
+.my-custom-multiselect .multiselect__option--selected {
+  background-color: #9B72FF !important;
+  color: white;
 }

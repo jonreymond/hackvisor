@@ -1,0 +1,338 @@
+[
+  {
+    "Category":"Basic Demographics",
+    "Field":"Name",
+    "Value":"Haris Alic",
+    "Notes":null
+  },
+  {
+    "Category":"Basic Demographics",
+    "Field":"Location",
+    "Value":"Zurich, Switzerland",
+    "Notes":null
+  },
+  {
+    "Category":"Basic Demographics",
+    "Field":"Gender",
+    "Value":"Male",
+    "Notes":null
+  },
+  {
+    "Category":"Basic Demographics",
+    "Field":"Data of Birth",
+    "Value":"7\/13\/1990",
+    "Notes":null
+  },
+  {
+    "Category":"Basic Demographics",
+    "Field":"Marital Status",
+    "Value":"Single",
+    "Notes":null
+  },
+  {
+    "Category":"Basic Demographics",
+    "Field":"# of Children",
+    "Value":"0",
+    "Notes":null
+  },
+  {
+    "Category":"Basic Demographics",
+    "Field":"Language",
+    "Value":"Swiss German, English",
+    "Notes":null
+  },
+  {
+    "Category":"Basic Demographics",
+    "Field":"Nationality(ies)",
+    "Value":"Switzerland",
+    "Notes":null
+  },
+  {
+    "Category":"Basic Demographics",
+    "Field":"Residency(ies)",
+    "Value":"Switzerland",
+    "Notes":null
+  },
+  {
+    "Category":"Client Details",
+    "Field":"Occupation",
+    "Value":"Chief Technology Officer",
+    "Notes":null
+  },
+  {
+    "Category":"Client Details",
+    "Field":"Education Level",
+    "Value":"Doctoral",
+    "Notes":null
+  },
+  {
+    "Category":"Client Details",
+    "Field":"Income Level",
+    "Value":"1-2M per year",
+    "Notes":null
+  },
+  {
+    "Category":"Client Details",
+    "Field":"Asset Level",
+    "Value":"10-25M",
+    "Notes":null
+  },
+  {
+    "Category":"Client Details",
+    "Field":"Address",
+    "Value":"Limmatquai 100, Zurich Switzerland 8004",
+    "Notes":null
+  },
+  {
+    "Category":"Client Details",
+    "Field":"Housing Status",
+    "Value":"Rent",
+    "Notes":null
+  },
+  {
+    "Category":"Client Details",
+    "Field":"Phone Number",
+    "Value":"+41763883438",
+    "Notes":null
+  },
+  {
+    "Category":"Client Details",
+    "Field":"Email Address",
+    "Value":"Haris.Alic@gmail.com",
+    "Notes":null
+  },
+  {
+    "Category":"Investor Policy Statement",
+    "Field":"Return Objectives",
+    "Value":"High growth focus",
+    "Notes":null
+  },
+  {
+    "Category":"Investor Policy Statement",
+    "Field":"Asset Class Preferences",
+    "Value":"High growth sectors. Focus on capital appreciation",
+    "Notes":null
+  },
+  {
+    "Category":"Investor Policy Statement",
+    "Field":"Risk Objectives",
+    "Value":"High willingness and ability to take on risk",
+    "Notes":null
+  },
+  {
+    "Category":"Investor Policy Statement",
+    "Field":"Tax Considerations",
+    "Value":"High income and wealth tax",
+    "Notes":null
+  },
+  {
+    "Category":"Investor Policy Statement",
+    "Field":"Time Horizon Considerations",
+    "Value":"Long term (15+ years)",
+    "Notes":null
+  },
+  {
+    "Category":"Investor Policy Statement",
+    "Field":"Liquidity",
+    "Value":"Low liquidity needs",
+    "Notes":null
+  },
+  {
+    "Category":"Investor Policy Statement",
+    "Field":"Legal Considerations",
+    "Value":"CTO of public client",
+    "Notes":null
+  },
+  {
+    "Category":"Investor Policy Statement",
+    "Field":"Unique Circumstances",
+    "Value":"Prefers technology investments",
+    "Notes":null
+  },
+  {
+    "Category":"Investor Profile",
+    "Field":"Behaivor Type",
+    "Value":"Independent Individualist",
+    "Notes":"Active investor willing to risk personal capital, moderate to high risk, strong willed, likes to invests, does own research, contrarian, difficult to advise but will listen to sound advice, give regular education"
+  },
+  {
+    "Category":"Investor Profile",
+    "Field":"Cognitive Bias(es)",
+    "Value":"Confirmation bias",
+    "Notes":"Occurs when participants look for new information or distort new information to support an existing view"
+  },
+  {
+    "Category":"Investor Profile",
+    "Field":"Emotional Bias(es)",
+    "Value":"Overconfidence bias",
+    "Notes":"Leads participants to overestimate their own intuitive ability or\nreasoning. Claiming personal credit, overstating past accuracy, confidence in judgement\nincreases faster than accuracy. Mitigation - keep records, analyze history."
+  },
+  {
+    "Category":"Investor Profile",
+    "Field":"Financial Life Stage",
+    "Value":"Career Development",
+    "Notes":"The career development phase normally occurs during the 35\u201350 age range and is often a time of specific skill development within a given field, upward career mobility, and income growth. This phase often includes accumulation for the children\u2019s college educations as well as expenditures for college. Concern intensifies about retirement income planning and financial independence. Higher earners will begin building wealth beyond education and retirement objectives and may make large purchases, such as a vacation home, or travel extensively. Retirement saving tends to increase at a more rapid pace during this phase compared with the early career phase."
+  },
+  {
+    "Category":"Customer Profile",
+    "Field":"Customer Number",
+    "Value":"11789887",
+    "Notes":null
+  },
+  {
+    "Category":"Customer Profile",
+    "Field":"Current Products",
+    "Value":"1-Banking Services, 3-Asset Management Services",
+    "Notes":null
+  },
+  {
+    "Category":"Customer Profile",
+    "Field":"Applicable Products",
+    "Value":"1-Banking Services, 2-Mortgage Services, 3-Asset Management Services",
+    "Notes":null
+  },
+  {
+    "Category":"Advisor Information",
+    "Field":"Advisor Name",
+    "Value":"Garrett Wisthoff",
+    "Notes":null
+  },
+  {
+    "Category":"Advisor Information",
+    "Field":"Years as Advisor",
+    "Value":"7",
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  },
+  {
+    "Category":null,
+    "Field":null,
+    "Value":null,
+    "Notes":null
+  }
+]
