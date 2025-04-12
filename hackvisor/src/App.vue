@@ -1,47 +1,47 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import navbar from './components/navigationBar.vue'
+import userComponent from './components/userComponent.vue'
+import keywordComponent from './components/keywordComponent.vue'
+import productComponent from './components/productComponent.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
   <main>
-    <TheWelcome />
+    <!-- Main has three components -->
+
+    <!-- 1. That displays the user data -->
+    <div id="c1">
+      <userComponent />
+    </div>
+    <!-- 2. That displays the keyword graph -->
+    <div id="c2">
+      <keywordComponent />
+      <!-- 3. That displays the products displayed-->
+      <productComponent />
+    </div>
   </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<style>
+
+
+main {
+  display: flex;
+  flex-direction: row;
+  height : 100vh ; 
+  width : 100vw; 
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+
+#c1 {
+  height : 100%; 
+  width : 100% ; 
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+#c2 {
+  height : 50%; 
+  width : 100% ; 
 }
+
 </style>
