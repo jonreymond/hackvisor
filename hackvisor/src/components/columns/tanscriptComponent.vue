@@ -1,5 +1,6 @@
 <script setup>
 import dropdownWithSearch from '../blocks/dropdownWithSearch.vue';
+import keywordParagraph from '../blocks/keywordParagraph.vue';
 </script>
 <template>
 
@@ -7,25 +8,22 @@ import dropdownWithSearch from '../blocks/dropdownWithSearch.vue';
 
         <div class="windows-content">
             <div id="transcript">
-                <p>This is a black coding-themed window with scrollable text. You can add as much content as you want
-                    here, and it will remain scrollable.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam.</p>
-                <p>Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec
-                    tellus sed augue semper porta.</p>
-                <p>Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per
-                    conubia nostra, per inceptos himenaeos.</p>
-                <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.
-                    Aenean quam.</p>
-                <p>In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc
-                    egestas porttitor.</p>
-                <p>Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula
-                    lacinia aliquet. Mauris ipsum.</p>
-                <p>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum
-                    velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                </p>
-            </div>
+                <p>Chris, great to speak again. I wanted to start with a quick portfolio update. Overall performance declined this quarter due to the <keywordParagraph title="tariff situation" :selected="selectedKeyword.word"/>, but it is outperforming the benchmark. We see some challenges in the tech sector with interest rate expectations and potential increased tariffs.</p>
 
+<p>Thanks for the update. I'm a little concerned about the <keywordParagraph title="tariff situation" :selected="selectedKeyword.word" /> too, but I believe the technology sector will always grow, regardless of what the experts say. Oh, by the way, how was the <keywordParagraph title="wedding" :selected="selectedKeyword.word" /> on the honeymoon last month? I hope Simone and you had a great time in Maldives. And anything else new going on in your life here in Zurich?</p>
+
+<p>Yes, we finally got married and the Maldives were breathtaking. Absolutely stunning. And yes, actually, Simone is pregnant. We're having a baby. We're super excited, but to be honest, a little overwhelmed. We're currently in an apartment and we're thinking about buying a house now.</p>
+
+<p>Oh, that's great. Given this, it may be a wise time to reevaluate your <keywordParagraph title="investment strategy" :selected="selectedKeyword.word" /> and plan for your  <keywordParagraph title="liquidity needs" :selected="selectedKeyword.word" /> for a home purchase. And just so you know, we have multiple liquidity needs <keywordParagraph title="mortgage" :selected="selectedKeyword.word"/> offerings when you are ready. We can help with a mortgage pre-approval as well.</p>
+
+<p>Yes, please. That would be a huge help. Also, I have another need. Do you have any other solutions for college <keywordParagraph title="expense planning" :selected="selectedKeyword.word" /> ? We'll only accept sending our precious and gifted child to Harvard, which is very expensive.</p>
+
+<p>I understand, but no, we don't currently have any dedicated solution on college planning. But let's schedule a follow-up appointment to discuss two other topics. Does Monday afternoon work?</p>
+
+<p>Monday works perfectly. Thank you, Garrett, for being the world's best advisor.</p>
+
+<p>You're welcome, Chris. And thank you for being the world's best client.</p>
+            </div>
             <div>
                 <div class="input-group mb-3">
                     <div style="width : 100% ; padding : 0px ; margin : 0px">
@@ -51,99 +49,23 @@ export default {
     data() {
         return {
             keywords: [
-                { "word": "marriage", "related": ["wedding", "joint account", "family planning", "honeymoon"] },
-                { "word": "wedding", "related": ["marriage", "honeymoon"] },
-                { "word": "honeymoon", "related": ["marriage", "wedding"] },
-                { "word": "joint account", "related": ["marriage", "family planning", "bank transfer"] },
-                { "word": "family planning", "related": ["marriage", "baby", "joint account"] },
+                { "word": "house", "related": ["wedding", "joint account", "family planning"] },
+                { "word" : "family planning", "related"  : ['house', 'baby', 'joint account']},
+                { "word": "married", "related": ["marriage", "house"] },
+                { "word": "college", "related": ["familiy planning"] },
+                { "word": "expense planning", "related": ["marriage", "family planning"] },
+                { "word": "tariff situation" , "related": ["marriage", "baby", "joint account"] },
+                { "word": "joint account" , "related": ["marriage"] },
 
-                { "word": "buying a house", "related": ["mortgage", "down payment", "home insurance", "property tax"] },
-                { "word": "mortgage", "related": ["buying a house", "interest rates", "home equity loan"] },
-                { "word": "down payment", "related": ["buying a house", "car purchase", "savings"] },
-                { "word": "home insurance", "related": ["buying a house", "property tax"] },
-                { "word": "property tax", "related": ["buying a house", "home insurance"] },
+                { "word": "mortgage", "related": ["house", "interest rates"] },
+                { "word": "liquidity needs", "related": [] },
 
-                { "word": "retirement", "related": ["pension", "401k", "investment", "retirement plan"] },
-                { "word": "pension", "related": ["retirement", "401k"] },
-                { "word": "401k", "related": ["retirement", "pension", "investment"] },
-                { "word": "investment", "related": ["retirement", "college", "startup capital"] },
-                { "word": "retirement plan", "related": ["retirement", "pension"] },
-
-                { "word": "baby", "related": ["family planning", "childcare", "education fund", "life insurance"] },
-                { "word": "childcare", "related": ["baby", "family support"] },
-                { "word": "education fund", "related": ["baby", "college", "savings"] },
-
-                { "word": "divorce", "related": ["separation of assets", "child support", "legal fees", "alimony"] },
-                { "word": "separation of assets", "related": ["divorce", "inheritance"] },
-                { "word": "child support", "related": ["divorce", "baby", "alimony"] },
-                { "word": "legal fees", "related": ["divorce", "adoption", "estate planning"] },
-                { "word": "alimony", "related": ["divorce", "child support"] },
-
-                { "word": "inheritance", "related": ["estate planning", "will", "trusts", "inheritance tax"] },
-                { "word": "estate planning", "related": ["inheritance", "death of spouse", "trusts"] },
-                { "word": "will", "related": ["inheritance", "death of spouse"] },
-                { "word": "trusts", "related": ["inheritance", "estate planning"] },
-                { "word": "inheritance tax", "related": ["inheritance", "gift tax"] },
-
-                { "word": "college", "related": ["student loan", "education fund", "graduation", "scholarships"] },
-                { "word": "student loan", "related": ["college", "graduation"] },
-                { "word": "scholarships", "related": ["college", "graduation"] },
-                { "word": "graduation", "related": ["college", "career planning", "salary expectations"] },
-
-                { "word": "health", "related": ["medical bills", "disability insurance", "health insurance", "life insurance"] },
-                { "word": "medical bills", "related": ["health", "insurance"] },
-                { "word": "disability insurance", "related": ["health", "life insurance"] },
-                { "word": "health insurance", "related": ["health", "medical bills"] },
-
-                { "word": "life insurance", "related": ["baby", "health", "disability insurance", "death of spouse"] },
-
-                { "word": "starting a business", "related": ["business loan", "startup capital", "taxes", "small business account"] },
-                { "word": "business loan", "related": ["starting a business", "startup capital"] },
-                { "word": "startup capital", "related": ["investment", "starting a business"] },
-                { "word": "taxes", "related": ["starting a business", "job change", "gift tax"] },
-                { "word": "small business account", "related": ["starting a business"] },
-
-                { "word": "moving", "related": ["relocation loan", "moving expenses", "new job", "cost of living"] },
-                { "word": "relocation loan", "related": ["moving", "new job"] },
-                { "word": "moving expenses", "related": ["moving", "relocation loan"] },
-                { "word": "cost of living", "related": ["moving", "job change"] },
-
-                { "word": "job change", "related": ["salary increase", "severance pay", "tax impact", "cost of living"] },
-                { "word": "salary increase", "related": ["job change", "graduation", "career planning"] },
-                { "word": "severance pay", "related": ["job change"] },
-                { "word": "tax impact", "related": ["job change", "taxes"] },
-
-                { "word": "vacation", "related": ["travel insurance", "savings plan", "credit card rewards", "exchange rate"] },
-                { "word": "travel insurance", "related": ["vacation", "health insurance"] },
-                { "word": "credit card rewards", "related": ["vacation", "buying a car"] },
-
-                { "word": "car purchase", "related": ["auto loan", "insurance", "down payment", "car trade-in"] },
-                { "word": "auto loan", "related": ["car purchase", "interest rates"] },
-                { "word": "insurance", "related": ["car purchase", "health", "medical bills"] },
-                { "word": "car trade-in", "related": ["car purchase"] },
-
-                { "word": "adoption", "related": ["legal fees", "family support", "education fund"] },
-                { "word": "family support", "related": ["adoption", "childcare", "baby"] },
-
-                { "word": "death of spouse", "related": ["will", "life insurance", "survivor benefits", "estate planning"] },
-                { "word": "survivor benefits", "related": ["death of spouse", "pension"] },
-
-                { "word": "home renovation", "related": ["home equity loan", "remodeling", "contractor", "personal loan"] },
-                { "word": "home equity loan", "related": ["home renovation", "mortgage"] },
-
-                { "word": "large gift", "related": ["gift tax", "bank transfer", "savings", "tax planning"] },
-                { "word": "gift tax", "related": ["large gift", "inheritance tax"] },
-                { "word": "bank transfer", "related": ["joint account", "large gift"] },
-
-                { "word": "tax planning", "related": ["large gift", "investment", "retirement"] },
-
-                { "word": "personal loan", "related": ["home renovation", "moving expenses"] },
-                { "word": "contractor", "related": ["home renovation", "remodeling"] }
 
 
             ],
             reload: true,
-            selectedKeyword: { word: 'wedding', related: ["marriage", "honeymoon"] }
+            selectedKeyword:{ "word": "expense planning", "related": ["marriage", "family planning"] },
+
         }
     },
     mounted() {

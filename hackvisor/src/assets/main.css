@@ -23,10 +23,10 @@
   font-family: "FrutigerNext", Helvetica, Arial, sans-serif !important
 }
 
-h3, h2, h1{
+h4, h3, h2, h1{
   background-color: var(--r_primary);
   color : var(--r_second);
-  padding : 10px ;
+  padding : 5px ;
   border-radius: 4px;
 
   width : 100%;
@@ -65,11 +65,18 @@ h3, h2, h1{
 }
 
 .my-custom-multiselect .multiselect__option--highlight {
-  background: linear-gradient(135deg, #4285F4, #9B72FF) !important;
+  background: var(--c1) !important;
   color: white;
 }
 
 .my-custom-multiselect .multiselect__option--selected {
-  background-color: #9B72FF !important;
+  background-color: var(--c1) !important;
   color: white;
+}
+
+.btn {
+  background-color : black ;
+  color : white ; 
+  margin : 5px ;
+
 }
