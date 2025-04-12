@@ -1,5 +1,5 @@
 <script setup>
-import dropdownWithSearch from './dropdownWithSearch.vue';
+import dropdownWithSearch from './blocks/dropdownWithSearch.vue';
 
 import { useProductStore } from '../store';
 import productCart from './productCart.vue';

@@ -1,5 +1,5 @@
 <script setup>
-import dropdownWithSearch from './dropdownWithSearch.vue';
+import dropdownWithSearch from './blocks/dropdownWithSearch.vue';
 </script>
 <template>
    

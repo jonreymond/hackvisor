@@ -19,7 +19,7 @@
   },
   {
     "Category":"Basic Demographics",
-    "Field":"Data of Birth",
+    "Field":"Date of Birth",
     "Value":"7\/13\/1990",
     "Notes":null
   },
@@ -201,138 +201,6 @@
     "Category":"Advisor Information",
     "Field":"Years as Advisor",
     "Value":"7",
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
-    "Notes":null
-  },
-  {
-    "Category":null,
-    "Field":null,
-    "Value":null,
     "Notes":null
   }
 ]
