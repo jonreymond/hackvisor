@@ -49,5 +49,5 @@ The main goal of our user interface is to provide clear strucure in the Raiffeis
 - Meeting Summaries: Summarizes client-advisor meetings, including notes, action items, and advisor suggestions, to streamline follow-ups and decision-making.
 - Interactive Layout: Features a responsive, animated column-based layout for easy navigation between client data, transcripts, and summaries.
 
-  To run the interface yourself, you can download/fork this repo and following the instruction in the [README](./userinterface/READ.md)
+  To run the interface yourself, you can download/fork this repo and following the instruction in the [README](./userInterface/READ.md)
 ![AAA Demonstration](./UserInterface.gif)
