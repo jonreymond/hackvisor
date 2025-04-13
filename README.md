@@ -16,7 +16,7 @@ The Raiffeisen Agentic Advisor Assistant (AAA) is designed to enhance the effici
 2. **Data Check**  
    At the end of a session, AAA cross-references client-shared information with existing personal records and suggests updates. The advisor can then easily validate or reject proposed changes.
 
-3. **Representativeness Bias Detection**  
+3. **Bias Detection**  
    AAA uses pattern recognition to detect all sort of biases, cognitive, conservative, bias, that may affect the advisor’s decisions or recommendations. It provides feedback to raise awareness and improve future advisory performance.
 
 4. **History Memory**  
