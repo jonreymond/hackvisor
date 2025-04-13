@@ -24,13 +24,22 @@ The AAA aligns with Raiffeisen’s long-term vision of digitized, client-centere
 - **Stronger customer experience** with contextual memory
 
 ## AI Agents
-The system is composed of several specialized agents working together:
+The system is composed of several specialized agents working together to analyze and address behavioral biases in financial advising:
 
-1. **Data Retrieval Agent**: Fetches and indexes relevant client and product information
-2. **Dialogue Analysis Agent**: Analyzes the conversation transcript for topics, questions, and emotional cues
-3. **Summarization Agent**: Creates structured summaries of the meeting
-4. **Recommendation Agent**: Identifies unmet needs and suggests relevant products
-5. **Orchestrator**: Coordinates the agents and generates the final report
+1. **Data Retrieval Agent**: Fetches and indexes relevant client and product information from various sources, including historical bias patterns
+2. **Data Quality Agent**: Assesses and validates the quality of input data, ensuring reliable bias analysis
+3. **Meeting Notes Agent**: Creates structured summaries of the client-advisor conversation, highlighting potential bias triggers
+4. **Behavioral Bias Agent**: Core agent that analyzes conversation for behavioral biases and emotional patterns, identifying:
+   - Loss aversion
+   - Overconfidence
+   - Anchoring
+   - Herding behavior
+   - Recency bias
+   - Confirmation bias
+5. **Financial Advisor Agent**: Provides personalized financial recommendations based on the conversation, accounting for identified biases
+6. **Product Portfolio Checker Agent**: Analyzes product portfolios and identifies gaps, considering bias mitigation strategies
+7. **Summarization Agent**: Generates comprehensive final reports with bias analysis and mitigation recommendations
+8. **Orchestrator**: Coordinates all agents and manages the analysis pipeline, ensuring bias-aware decision making
 
 ## User Interface
 
@@ -41,5 +50,4 @@ The main goal of our user interface is to provide clear strucure in the Raiffeis
 - Meeting Summaries: Summarizes client-advisor meetings, including notes, action items, and advisor suggestions, to streamline follow-ups and decision-making.
 - Interactive Layout: Features a responsive, animated column-based layout for easy navigation between client data, transcripts, and summaries.
 
-  To run the interface yourself, you can download/fork this repo and following the instruction in the [README](./userInterface/README.md)
 ![AAA Demonstration](./UserInterface.gif)

@@ -2,96 +2,90 @@
 
 A multi-agent system for post-meeting analysis of financial advisor-client conversations. This system analyzes meeting transcripts, client data, and product portfolios to generate structured summaries, detect emotional patterns, identify unmet needs, and recommend products.
 
+
 ## Overview
 
-The system is composed of several specialized agents working together:
+The system is composed of several specialized agents working together to analyze and address behavioral biases in financial advising:
 
-1. **Data Retrieval Agent**: Fetches and indexes relevant client and product information
-2. **Dialogue Analysis Agent**: Analyzes the conversation transcript for topics, questions, and emotional cues
-3. **Summarization Agent**: Creates structured summaries of the meeting
-4. **Recommendation Agent**: Identifies unmet needs and suggests relevant products
-5. **Orchestrator**: Coordinates the agents and generates the final report
+1. **Data Retrieval Agent**: Fetches and indexes relevant client and product information from various sources, including historical bias patterns
+2. **Data Quality Agent**: Assesses and validates the quality of input data, ensuring reliable bias analysis
+3. **Meeting Notes Agent**: Creates structured summaries of the client-advisor conversation, highlighting potential bias triggers
+4. **Behavioral Bias Agent**: Core agent that analyzes conversation for behavioral biases and emotional patterns, identifying:
+   - Loss aversion
+   - Overconfidence
+   - Anchoring
+   - Herding behavior
+   - Recency bias
+   - Confirmation bias
+5. **Financial Advisor Agent**: Provides personalized financial recommendations based on the conversation, accounting for identified biases
+6. **Product Portfolio Checker Agent**: Analyzes product portfolios and identifies gaps, considering bias mitigation strategies
+7. **Summarization Agent**: Generates comprehensive final reports with bias analysis and mitigation recommendations
+8. **Orchestrator**: Coordinates all agents and manages the analysis pipeline, ensuring bias-aware decision making
 
-## Requirements
-
-- Python 3.8+
-- OpenAI API key
 
 ## Installation
 
 1. Clone this repository:
-   ```
+   ```bash
    git clone https://github.com/yourusername/financial-advisor-system.git
    cd financial-advisor-system
    ```
 
-2. Install the required packages:
+2. Create and activate a virtual environment:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    ```
+
+3. Install the required packages:
+   ```bash
    pip install -r requirements.txt
    ```
 
-3. Create a `.env` file with your OpenAI API key:
-   ```
-   OPENAI_API_KEY=your_openai_api_key_here
+4. Create a `.env` file with your Azure OpenAI API key:
+   ```bash
+   cp .env.example .env
+   # Edit .env with your Azure OpenAI API key
    ```
 
 ## Data Preparation
 
-Place your data files in the `data/` directory:
-- `client_state.xlsx`: Client financial information
-- `product_portfolio.docx`: Product catalog
+Understanding biases is crucial for effective financial advising. Place your data files in the `data/` directory to analyze behavioral biases:
+- `client_state.csv`: Client financial information and historical bias patterns
+- `product_portfolio.docx`: Product catalog with bias mitigation strategies
 - `transcript.m4a`: Audio recording of the meeting (or text transcript)
+- `biases.csv`: Contains identified biases and emotional patterns observed during client interactions
 
 For demo purposes, the system can run without these files by using simulated data.
 
 ## Usage
 
 Run the system:
-```
+```bash
 python main.py
 ```
 
 The system will:
 1. Load and index client and product data
-2. Analyze the meeting transcript
-3. Generate a structured summary
-4. Identify unmet needs and recommend products
-5. Create a comprehensive report
+2. Analyze the meeting transcript for behavioral biases
+3. Generate a structured summary with bias insights
+4. Identify unmet needs and recommend bias-aware products
+5. Create a comprehensive report with bias mitigation strategies
 
-Reports and results are saved in the `output/` directory.
-
-## Output
-
-The system generates two types of output files:
-1. **JSON analysis file**: Complete analysis results in structured format
-2. **Text report file**: Human-readable report with key sections:
-   - Client's Goals & Questions
-   - Advisor's Analysis & Recommendations
-   - Action Items & Next Steps
-   - Client's Reactions/Concerns
-   - Unmet Financial Needs
-   - Product Recommendations
-   - Suggested Next Steps
+Reports and results are saved in the `output/` directory.****
 
 ## Implementation Details
 
 This system uses:
-- LangChain for agent and chain orchestration
-- OpenAI GPT models for language processing
-- FAISS for vector search and semantic retrieval
-- Chain-of-Thought prompting for emotional analysis
-- Structured summarization with prompt engineering
-
-## Limitations
-
-- Real audio transcription requires OpenAI Whisper (not implemented in this prototype)
-- Analysis quality depends on the OpenAI model used (GPT-4 recommended)
-- Simulated data is used when real data files are not available
+- Azure OpenAI GPT models for language processing and analysis
+- FAISS for vector search and semantic **retrieval**
 
 ## Future Improvements
 
-- Implement real-time audio transcription with Whisper
-- Add more sophisticated emotion detection
-- Improve parsing of Excel and Word documents
-- Add a web interface for viewing reports
-- Fine-tune models on financial domain data
+- Real-time analysis capabilities
+- Integration with more financial data sources
+- Multi-language support
+- Custom model fine-tuning for financial domain
+
+
+
