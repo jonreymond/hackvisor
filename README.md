@@ -23,15 +23,6 @@ TODO: The AAA aligns with Raiffeisen’s long-term vision of digitized, client-c
 - **Improved advisory quality** via cognitive bias monitoring  
 - **Stronger customer experience** with contextual memory
 
-## User Interface
-// TODO NEEDS TO BE CHECKED
-The main goal of our user interface is to provide clear strucure in the Raiffeisen design. The user interface of the project provides a comprehensive assistant for advisors, featuring the following functionalities:
-- Client Data Management: Displays detailed client information, including demographics, financial details, and investment preferences, with filtering capabilities.
-- Transcript Analysis: Highlights keywords in the meeting conversation transcript, allowing advisors to focus on the conversation. Keywords are dynamically styled and selectable for further exploration.
-- Keyword Management: Allows users to search, add, and interact with keywords, providing insights into related terms and enhancing conversation analysis.
-- Meeting Summaries: Summarizes client-advisor meetings, including notes, action items, and advisor suggestions, to streamline follow-ups and decision-making.
-- Interactive Layout: Features a responsive, animated column-based layout for easy navigation between client data, transcripts, and summaries.
-
 ## AI Agents
 AAA is composed of specialized agents, each handling a specific domain:
 
@@ -48,3 +39,13 @@ AAA is composed of specialized agents, each handling a specific domain:
   Analyzes advisor statements and response patterns using heuristics and LLM-based insight models to flag potential biases.
 
 - **Memory**
+
+## User Interface
+
+The main goal of our user interface is to provide clear strucure in the Raiffeisen design. The user interface of the project provides a comprehensive assistant for advisors, featuring the following functionalities:
+- Client Data Management: Displays detailed client information, including demographics, financial details, and investment preferences, with filtering capabilities.
+- Transcript Analysis: Highlights keywords in the meeting conversation transcript, allowing advisors to focus on the conversation. Keywords are dynamically styled and selectable for further exploration.
+- Keyword Management: Allows users to search, add, and interact with keywords, providing insights into related terms and enhancing conversation analysis.
+- Meeting Summaries: Summarizes client-advisor meetings, including notes, action items, and advisor suggestions, to streamline follow-ups and decision-making.
+- Interactive Layout: Features a responsive, animated column-based layout for easy navigation between client data, transcripts, and summaries.
+![AAA Demonstration](./UserInterface.gif)

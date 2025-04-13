@@ -8,21 +8,48 @@ import keywordParagraph from '../blocks/keywordParagraph.vue';
 
         <div class="windows-content">
             <div id="transcript">
-                <p>Chris, great to speak again. I wanted to start with a quick portfolio update. Overall performance declined this quarter due to the <keywordParagraph title="tariff situation" :selected="selectedKeyword.word"/>, but it is outperforming the benchmark. We see some challenges in the tech sector with interest rate expectations and potential increased tariffs.</p>
+                <p>Chris, great to speak again. I wanted to start with a quick portfolio update. Overall performance
+                    declined this quarter due to the
+                    <keywordParagraph title="tariff situation" :selected="selectedKeyword" />, but it is outperforming
+                    the benchmark. We see some challenges in the tech sector with interest rate expectations and
+                    potential increased tariffs.
+                </p>
 
-<p>Thanks for the update. I'm a little concerned about the <keywordParagraph title="tariff situation" :selected="selectedKeyword.word" /> too, but I believe the technology sector will always grow, regardless of what the experts say. Oh, by the way, how was the <keywordParagraph title="wedding" :selected="selectedKeyword.word" /> on the honeymoon last month? I hope Simone and you had a great time in Maldives. And anything else new going on in your life here in Zurich?</p>
+                <p>Thanks for the update. I'm a little concerned about the
+                    <keywordParagraph title="tariff situation" :selected="selectedKeyword" /> too, but I believe the
+                    technology sector will always grow, regardless of what the experts say. Oh, by the way, how was the
+                    <keywordParagraph title="wedding" :selected="selectedKeyword" /> on the honeymoon last month? I hope
+                    Simone and you had a great time in Maldives. And anything else new going on in your life here in
+                    Zurich?
+                </p>
 
-<p>Yes, we finally got married and the Maldives were breathtaking. Absolutely stunning. And yes, actually, Simone is pregnant. We're having a baby. We're super excited, but to be honest, a little overwhelmed. We're currently in an apartment and we're thinking about buying a house now.</p>
+                <p>Yes, we finally got
+                    <keywordParagraph title="married" :selected="selectedKeyword" /> and the Maldives were breathtaking.
+                    Absolutely stunning. And yes, actually, Simone is pregnant. We're having a baby. We're super
+                    excited, but to be honest, a little overwhelmed. We're currently in an apartment and we're thinking
+                    about buying a house now.
+                </p>
 
-<p>Oh, that's great. Given this, it may be a wise time to reevaluate your <keywordParagraph title="investment strategy" :selected="selectedKeyword.word" /> and plan for your  <keywordParagraph title="liquidity needs" :selected="selectedKeyword.word" /> for a home purchase. And just so you know, we have multiple liquidity needs <keywordParagraph title="mortgage" :selected="selectedKeyword.word"/> offerings when you are ready. We can help with a mortgage pre-approval as well.</p>
+                <p>Oh, that's great. Given this, it may be a wise time to reevaluate your
+                    <keywordParagraph title="investment strategy" :selected="selectedKeyword" /> and plan for your
+                    <keywordParagraph title="liquidity needs" :selected="selectedKeyword" /> for a home purchase. And
+                    just so you know, we have multiple liquidity needs
+                    <keywordParagraph title="mortgage" :selected="selectedKeyword" /> offerings when you are ready. We
+                    can help with a mortgage pre-approval as well.
+                </p>
 
-<p>Yes, please. That would be a huge help. Also, I have another need. Do you have any other solutions for college <keywordParagraph title="expense planning" :selected="selectedKeyword.word" /> ? We'll only accept sending our precious and gifted child to Harvard, which is very expensive.</p>
+                <p>Yes, please. That would be a huge help. Also, I have another need. Do you have any other solutions
+                    for college
+                    <keywordParagraph title="expense planning" :selected="selectedKeyword" /> ? We'll only accept
+                    sending our precious and gifted child to Harvard, which is very expensive.
+                </p>
 
-<p>I understand, but no, we don't currently have any dedicated solution on college planning. But let's schedule a follow-up appointment to discuss two other topics. Does Monday afternoon work?</p>
+                <p>I understand, but no, we don't currently have any dedicated solution on college planning. But let's
+                    schedule a follow-up appointment to discuss two other topics. Does Monday afternoon work?</p>
 
-<p>Monday works perfectly. Thank you, Garrett, for being the world's best advisor.</p>
+                <p>Monday works perfectly. Thank you, Garrett, for being the world's best advisor.</p>
 
-<p>You're welcome, Chris. And thank you for being the world's best client.</p>
+                <p>You're welcome, Chris. And thank you for being the world's best client.</p>
             </div>
             <div>
                 <div class="input-group mb-3">
@@ -50,12 +77,12 @@ export default {
         return {
             keywords: [
                 { "word": "house", "related": ["wedding", "joint account", "family planning"] },
-                { "word" : "family planning", "related"  : ['house', 'baby', 'joint account']},
-                { "word": "married", "related": ["marriage", "house"] },
+                { "word": "family planning", "related": ['house', 'baby', 'joint account'] },
+                { "word": "marriage", "related": ['married', "marriage", "house"] },
                 { "word": "college", "related": ["familiy planning"] },
                 { "word": "expense planning", "related": ["marriage", "family planning"] },
-                { "word": "tariff situation" , "related": ["marriage", "baby", "joint account"] },
-                { "word": "joint account" , "related": ["marriage"] },
+                { "word": "tariff situation", "related": ["marriage", "baby", "joint account"] },
+                { "word": "joint account", "related": ["marriage"] },
 
                 { "word": "mortgage", "related": ["house", "interest rates"] },
                 { "word": "liquidity needs", "related": [] },
@@ -64,7 +91,7 @@ export default {
 
             ],
             reload: true,
-            selectedKeyword:{ "word": "expense planning", "related": ["marriage", "family planning"] },
+            selectedKeyword:  { "word": "liquidity needs", "related": [] },
 
         }
     },
@@ -155,13 +182,13 @@ h3 {
 
 .windows-content>div {
     flex: 1;
-    padding-left : 30px;
-    padding-right : 10px;
+    padding-left: 30px;
+    padding-right: 10px;
 
 }
 
 #transcript {
-    background-color: rgb(255,255,255, 0.6);
+    background-color: rgb(255, 255, 255, 0.6);
     color: black;
     padding: 10px;
     border-radius: 8px;

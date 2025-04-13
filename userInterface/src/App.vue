@@ -13,7 +13,7 @@ const columns = [
     { title: 'Summary', component: SummaryComponent }
 ]
 
-const activeIndex = ref(0)
+const activeIndex = ref(1)
 
 const activate = (index) => {
     if (activeIndex.value !== index) {
