@@ -1,6 +1,13 @@
 # Raiffeisen Agentic Advisor Assistant (AAA)
 
-## Overview
+The Agentic Advisor Assistant is a solution for Client Advisors to 
+
+1) Automate manual tasks such as summarizing Client and Advisor meeting notes and action items with speech to text capabilities
+2) Leverage AI agents to assess client datasets, meeting transcripts, and other reference data multiple AI agents to perform data quality checks to either validate data is correct or identify errors
+3) Leverage AI agents to search for key phrases or words in meeting transcripts to identify ways to improve the Advisors recommendations to clients, identify existing products that meeting the Client’s needs, and identify Client needs that are unmet with current products. 
+ 
+The solution is built in Microsoft Azure infrastructure leveraging Whisper for Speech to Text capabilities and GPT-4o for RAG based functions. The end user application is built in Python and is intended to provide Advisors with relevant data about the Client, meeting summaries, AI generated recommendations, and the ability to perform various actions. 
+
 The Raiffeisen Agentic Advisor Assistant (AAA) is designed to enhance the efficiency and effectiveness of Raiffeisen advisors during client interactions. It acts as a multi-functional AI-powered assistant throughout the client journey — from appointment tracking and data management to improving advisory quality. Key features include:
 
 1. **Transcript Summary**  
