@@ -1,0 +1,37 @@
+Category,Field,Value,Notes
+Basic Demographics,Name,Haris Alic,
+Basic Demographics,Location,"Zurich, Switzerland",
+Basic Demographics,Gender,Male,
+Basic Demographics,Data of Birth,7/13/1990,
+Basic Demographics,Marital Status,Single,
+Basic Demographics,# of Children,0,
+Basic Demographics,Language,"Swiss German, English",
+Basic Demographics,Nationality(ies),Switzerland,
+Basic Demographics,Residency(ies),Switzerland,
+Client Details,Occupation,Chief Technology Officer,
+Client Details,Education Level,Doctoral,
+Client Details,Income Level,1-2M per year,
+Client Details,Asset Level,10-25M,
+Client Details,Address,"Limmatquai 100, Zurich Switzerland 8004",
+Client Details,Housing Status,Rent,
+Client Details,Phone Number,41763883438,
+Client Details,Email Address,Haris.Alic@gmail.com,
+Investor Policy Statement,Return Objectives,High growth focus,
+Investor Policy Statement,Asset Class Preferences,High growth sectors. Focus on capital appreciation,
+Investor Policy Statement,Risk Objectives,High willingness and ability to take on risk,
+Investor Policy Statement,Tax Considerations,High income and wealth tax,
+Investor Policy Statement,Time Horizon Considerations,Long term (15+ years),
+Investor Policy Statement,Liquidity,Low liquidity needs,
+Investor Policy Statement,Legal Considerations,CTO of public client,
+Investor Policy Statement,Unique Circumstances,Prefers technology investments,
+Investor Profile,Behaivor Type,Independent Individualist,"Active investor willing to risk personal capital, moderate to high risk, strong willed, likes to invests, does own research, contrarian, difficult to advise but will listen to sound advice, give regular education"
+Investor Profile,Cognitive Bias(es),Confirmation bias,Occurs when participants look for new information or distort new information to support an existing view
+Investor Profile,Emotional Bias(es),Overconfidence bias,"Leads participants to overestimate their own intuitive ability or
+reasoning. Claiming personal credit, overstating past accuracy, confidence in judgement
+increases faster than accuracy. Mitigation - keep records, analyze history."
+Investor Profile,Financial Life Stage,Career Development,"The career development phase normally occurs during the 35–50 age range and is often a time of specific skill development within a given field, upward career mobility, and income growth. This phase often includes accumulation for the children’s college educations as well as expenditures for college. Concern intensifies about retirement income planning and financial independence. Higher earners will begin building wealth beyond education and retirement objectives and may make large purchases, such as a vacation home, or travel extensively. Retirement saving tends to increase at a more rapid pace during this phase compared with the early career phase."
+Customer Profile,Customer Number,11789887,
+Customer Profile,Current Products,"1-Banking Services, 3-Asset Management Services",
+Customer Profile,Applicable Products,"1-Banking Services, 2-Mortgage Services, 3-Asset Management Services",
+Advisor Information,Advisor Name,Garrett Wisthoff,
+Advisor Information,Years as Advisor,7,

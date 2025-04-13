@@ -16,7 +16,7 @@ The Raiffeisen Agentic Advisor Assistant (AAA) is designed to enhance the effici
    Each client's historical interactions are stored and continuously updated, allowing AAA to offer contextual suggestions, detect changes over time, and assist in continuity across appointments.
 
 ## Business
-TODO: The AAA aligns with Raiffeisen’s long-term vision of digitized, client-centered banking. By automating administrative tasks and enhancing decision-making awareness, advisors can focus more on building client relationships and offering high-quality financial advice. Key business impacts include:
+The AAA aligns with Raiffeisen’s long-term vision of digitized, client-centered banking. By automating administrative tasks and enhancing decision-making awareness, advisors can focus more on building client relationships and offering high-quality financial advice. Key business impacts include:
 
 - **Time-saving** through meeting automation  
 - **Increased accuracy** of client records  
@@ -24,21 +24,13 @@ TODO: The AAA aligns with Raiffeisen’s long-term vision of digitized, client-c
 - **Stronger customer experience** with contextual memory
 
 ## AI Agents
-AAA is composed of specialized agents, each handling a specific domain:
+The system is composed of several specialized agents working together:
 
-- **Transcription Agent**  
-  TODO
-
-- **Summarization Agent**  
-  Extracts key discussion points using natural language understanding models.
-
-- **Data Validation Agent**  
-  Uses NLP and entity recognition to compare spoken inputs against CRM data.
-
-- **Bias Detection Agent**  
-  Analyzes advisor statements and response patterns using heuristics and LLM-based insight models to flag potential biases.
-
-- **Memory**
+1. **Data Retrieval Agent**: Fetches and indexes relevant client and product information
+2. **Dialogue Analysis Agent**: Analyzes the conversation transcript for topics, questions, and emotional cues
+3. **Summarization Agent**: Creates structured summaries of the meeting
+4. **Recommendation Agent**: Identifies unmet needs and suggests relevant products
+5. **Orchestrator**: Coordinates the agents and generates the final report
 
 ## User Interface
 
