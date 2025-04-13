@@ -40,6 +40,5 @@ The main goal of our user interface is to provide clear strucure in the Raiffeis
 - Keyword Management: Allows users to search, add, and interact with keywords, providing insights into related terms and enhancing conversation analysis.
 - Meeting Summaries: Summarizes client-advisor meetings, including notes, action items, and advisor suggestions, to streamline follow-ups and decision-making.
 - Interactive Layout: Features a responsive, animated column-based layout for easy navigation between client data, transcripts, and summaries.
-
-  To run the interface yourself, you can download/fork this repo and following the instruction in the [README](./userInterface/README.md)
+  
 ![AAA Demonstration](./UserInterface.gif)
